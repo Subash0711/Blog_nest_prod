@@ -25,9 +25,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'a!p$bvaubm@yk%exj)hh+n9(8*!0pd_odh&$79n&y^+7@d%k+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['159.89.166.14']
 
 
 # Application definition
@@ -81,11 +81,14 @@ WSGI_APPLICATION = 'Blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'bolgNest', 
-        'USER': 'postgres',
-        'PASSWORD': 2023,
-        'HOST': 'localhost', 
-        'PORT': '5433',
+        'NAME': 'defaultdb', 
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_9N8RY6vMNw4gfig5v8Q',
+        'HOST': 'db-postgresql-nyc3-39179-do-user-15535884-0.c.db.ondigitalocean.com', 
+        'PORT': 25060,
+        'OPTIONS': {
+            'sslmode': 'require',
+    },
     }
 }
 
