@@ -93,6 +93,21 @@ DATABASES = {
 }
 
 
+# settings.py
+
+# Use the DigitalOcean Spaces endpoint for S3
+AWS_S3_ENDPOINT_URL = 'https://django.blognest.nyc3.digitaloceanspaces.com'
+
+# DigitalOcean Spaces credentials
+AWS_ACCESS_KEY_ID = 'DO00TQAZ4NDPM3EZ8Q4R'
+AWS_SECRET_ACCESS_KEY = 'mrsj4IEgB7ffa7b1Cgh25ErkFv9c1V2WBM+/1e2Nb/c'
+
+# Specify the default storage backend
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# Set the bucket name
+AWS_STORAGE_BUCKET_NAME = 'blognest'
+
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -129,7 +144,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://django.blognest.nyc3.digitaloceanspaces.com/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
