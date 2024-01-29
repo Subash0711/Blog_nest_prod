@@ -148,14 +148,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-AWS_ACCESS_KEY_ID = 'DO00KLZBJ9NQR4CF7Q44'
-AWS_SECRET_ACCESS_KEY = 'RedkozWeSdHgzqkc07TU0RK2TXodmhc6TwNjLhiHQrk'
+AWS_ACCESS_KEY_ID = 'DO00BTXKMYQTVUZJAVAN'
+AWS_SECRET_ACCESS_KEY = 'WApLul40/EiNHOYyY8xlrtc+VJcPGR1eNbaTiJRWLis'
 AWS_STORAGE_BUCKET_NAME = 'django.blognest'
-AWS_S3_ENDPOINT_URL = 'https://django.blognest.nyc3.digitaloceanspaces.com'
+AWS_S3_ENDPOINT_URL = 'https://nyc3.digitaloceanspaces.com'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 AWS_LOCATION = 'blognest'
+AWS_S3_REGION_NAME = 'nyc3'
+AWS_S3_SSL = True
+AWS_S3_VERIFY_SSL = True
 
 STATICFILES_DIRS = []
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_ENDPOINT_URL, AWS_LOCATION)
